@@ -20,9 +20,11 @@ app.message(bProj, async ({ message, say }) => {
             return;
         }
         const b = await response.json();
-        // console.log(b);
-        await say(`[${b.issueType.name}] ` +
-            `<https://${process.env.BACKLOG_WORK_SPACE}/view/${issueKey}|${issueKey} ${b.summary}> ` +
+        if (!b) {
+            return;
+        }
+        console.log(b);
+        await say(`[${b.issueType.name}] <https://${process.env.BACKLOG_WORK_SPACE}/view/${issueKey}|${issueKey} ${b.summary}> ` +
             `| ${b.assignee.name} | ${b.priority.name} | ${b.milestone[0]?.name} | ${b.status.name}`
         );
     }
