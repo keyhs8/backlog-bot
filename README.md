@@ -1,1 +1,1 @@
-# backlog-bot
+# backlog-slack-bot
