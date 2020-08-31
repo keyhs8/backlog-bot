@@ -1,0 +1,15 @@
+{
+  "name": "backlog_linker",
+  "version": "1.0.0",
+  "description": "Bot for Slack made by Bolt",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/bolt": "^2.3.0",
+    "node-fetch": "^2.6.0"
+  }
+}
